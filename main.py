@@ -5,7 +5,7 @@ turtle.shape("turtle")
 turtle.color('red')
 i = 0
 # Draw a square
-while i < 4:
+for _ in range(4):
     turtle.forward(100)
     turtle.rt(90)
     i +=1
