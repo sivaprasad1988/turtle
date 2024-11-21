@@ -29,7 +29,7 @@ def draw_circle(num_of_times,shifting_value=.5):
         initial_heading = initial_heading + shifting_value
 
 
-draw_circle(360)
+draw_circle(1000)
 
 screen = Screen()
 screen.exitonclick()
