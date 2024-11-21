@@ -1,25 +1,35 @@
 from turtle import Turtle, Screen
 import random
+
 turtle = Turtle()
 turtle.speed('fastest')
-#turtle.shape("turtle")
 turtle.color('red')
 
-initial_heading = 0
 
-# Draw a square
-for _ in range(500):
+def random_color():
     R = random.random()
     B = random.random()
     G = random.random()
-    turtle.color(R,B,G)
-    current_heading = turtle.heading() + initial_heading
-    turtle.setheading(current_heading)
-    turtle.circle(100)
-    initial_heading = initial_heading + 1
+    return (R, B, B)
 
 
+def draw_circle(num_of_times,shifting_value=.5):
+    """
+    Draw a circle
+    :param num_of_times: number of times circle should be dran
+    :param shifting_value: Number to be shifted after reach circle
+    """
+    initial_heading = 0
+    # Draw a circle
+    for _ in range(num_of_times):
+        turtle.color(random_color())
+        current_heading = turtle.heading() + initial_heading
+        turtle.setheading(current_heading)
+        turtle.circle(100)
+        initial_heading = initial_heading + shifting_value
 
+
+draw_circle(360)
 
 screen = Screen()
 screen.exitonclick()
