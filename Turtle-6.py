@@ -12,7 +12,6 @@ turtle.penup()
 for _ in range(0,10):
     for _ in range(10):
         color = random.choice(color_list)
-        # Convert to valid turtle format (values between 0.0 and 1.0)
         normalized_color = tuple(c / 255 for c in color)
         turtle.dot(20, normalized_color);
         turtle.penup()
